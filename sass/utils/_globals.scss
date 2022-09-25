@@ -17,9 +17,15 @@ body {
 }
 
 .container {
-  width: 1200px;
+  min-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
+
+  &__responsive {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 
 .logo {
