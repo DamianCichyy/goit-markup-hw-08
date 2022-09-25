@@ -9,27 +9,16 @@ body {
 
 .wrapper {
   min-width: 480px;
+  max-width: 1600px;
   margin: 0 auto;
-
-  &__responsive {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
 }
 
 .container {
   min-width: 480px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-
-  &__responsive {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
 }
-
-
 
 .logo-color {
   color: $hover-color;
