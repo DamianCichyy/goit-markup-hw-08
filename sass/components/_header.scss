@@ -1,6 +1,6 @@
 .header {
   border-bottom: 1px solid $header-border-color;
-  padding: 24px 0 25px 0;
+  padding: 16px 0 16px 0;
 
   &__container {
     @include flex-row;
@@ -9,6 +9,10 @@
 
     &-logo {
       color: $header-logo-color;
+      font-family: $secondary-font-family;
+      font-weight: map-get($font-weight, bold);
+      font-size: map-get($font-size, h);
+      line-height: map-get($line-height, a);
     }
 
     &-nav {
@@ -57,6 +61,154 @@
         &:focus {
           fill: $hover-color;
           color: $hover-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-bottom: 1px solid $header-border-color;
+    padding: 21px 0 21px 0;
+
+    &__container {
+      @include flex-row;
+      align-items: center;
+      gap: 83px;
+
+      &-logo {
+        font-size: map-get($font-size, h);
+        line-height: map-get($line-height, a);
+      }
+
+      &-nav {
+        @include flex-row;
+        @include header-fonts;
+        gap: 60px;
+
+        &-link {
+          @include transition-color;
+          color: $secondary-font-color;
+          position: relative;
+
+          &:hover,
+          &:focus {
+            color: $hover-color;
+          }
+        }
+      }
+
+      &-contacts {
+        @include flex-column;
+        @include header-fonts;
+        gap: 10px;
+        margin-left: auto;
+
+        &-link {
+          @include flex;
+          @include transition-color-fill;
+          gap: 8px;
+          fill: $header-svg-color;
+          font-size: map-get($font-size, g);
+          line-height: map-get($line-height, a);
+
+          &-envelope {
+            width: 14px;
+            height: 10px;
+          }
+
+          &-smartphone {
+            width: 10px;
+            height: 14px;
+          }
+
+          &:hover,
+          &:focus {
+            fill: $hover-color;
+            color: $hover-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    border-bottom: 1px solid $header-border-color;
+    padding: 24px 0 25px 0;
+
+    &__container {
+      @include flex-row;
+      align-items: center;
+      gap: 93px;
+
+      &-logo {
+        color: $header-logo-color;
+        font-family: $secondary-font-family;
+        font-weight: map-get($font-weight, bold);
+        font-size: map-get($font-size, c);
+        line-height: map-get($line-height, g);
+      }
+
+      &-nav {
+        @include flex-row;
+        @include header-fonts;
+        gap: 46px;
+
+        &-link {
+          @include transition-color;
+          color: $secondary-font-color;
+          position: relative;
+
+          &:hover,
+          &:focus {
+            color: $hover-color;
+          }
+        }
+
+        .blue-line:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 4px;
+          right: 0;
+          bottom: 0;
+          transform: translateY(33px);
+          background-color: $hover-color;
+          border-radius: map-get($border-radius, small);
+        }
+      }
+
+      &-contacts {
+        @include flex-row;
+        @include header-fonts;
+        gap: 30px;
+        margin-left: auto;
+
+        &-link {
+          @include flex;
+          @include transition-color-fill;
+          gap: 10px;
+          fill: $header-svg-color;
+
+          &-envelope {
+            width: 16px;
+            height: 12px;
+          }
+
+          &-smartphone {
+            width: 10px;
+            height: 16px;
+          }
+
+          &:hover,
+          &:focus {
+            fill: $hover-color;
+            color: $hover-color;
+          }
         }
       }
     }

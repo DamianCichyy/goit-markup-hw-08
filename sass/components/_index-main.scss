@@ -9,10 +9,6 @@
     url(../images/background.jpg), no-repeat;
   min-width: 480px;
   padding: 200px 452px;
-  background-size: cover;
-  &__responsive {
-    max-width: 1600px;
-  }
 
   &__header {
     font-weight: map-get($font-weight, super-bold);

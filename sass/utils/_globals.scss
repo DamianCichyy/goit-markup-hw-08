@@ -13,6 +13,7 @@ body {
 
   &__responsive {
     max-width: 1600px;
+    margin: 0 auto;
   }
 }
 
@@ -28,12 +29,7 @@ body {
   }
 }
 
-.logo {
-  font-family: $secondary-font-family;
-  font-weight: map-get($font-weight, bold);
-  font-size: map-get($font-size, c);
-  line-height: map-get($line-height, g);
-}
+
 
 .logo-color {
   color: $hover-color;
