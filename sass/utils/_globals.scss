@@ -8,8 +8,12 @@ body {
 }
 
 .wrapper {
-  width: 1600px;
+  min-width: 480px;
   margin: 0 auto;
+
+  &__responsive {
+    max-width: 1600px;
+  }
 }
 
 .container {
