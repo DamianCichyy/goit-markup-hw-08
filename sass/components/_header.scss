@@ -16,52 +16,33 @@
     }
 
     &-nav {
-      @include flex-row;
-      @include header-fonts;
-      gap: 46px;
-
-      &-link {
-        @include transition-color;
-        color: $secondary-font-color;
-        position: relative;
-
-        &:hover,
-        &:focus {
-          color: $hover-color;
-        }
-      }
-
-      .blue-line:after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 4px;
-        right: 0;
-        bottom: 0;
-        transform: translateY(33px);
-        background-color: $hover-color;
-        border-radius: map-get($border-radius, small);
-      }
+      display: none;
     }
 
     &-contacts {
-      @include flex-row;
-      @include header-fonts;
-      gap: 30px;
+      display: none;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
       margin-left: auto;
+      border-style: none;
+      background: none;
 
-      &-link {
-        @include flex;
-        @include transition-color-fill;
-        gap: 10px;
-        fill: $header-svg-color;
+      &:hover &-svg,
+      &:focus &-svg {
+        fill: $hover-color;
+      }
 
-        &:hover,
-        &:focus {
-          fill: $hover-color;
-          color: $hover-color;
-        }
+      &-svg {
+        @include transition-fill;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        fill: $black-svg;
       }
     }
   }
@@ -97,6 +78,19 @@
             color: $hover-color;
           }
         }
+
+        .blue-line:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 4px;
+          right: 0;
+          bottom: 0;
+          transform: translateY(33px);
+          background-color: $hover-color;
+          border-radius: map-get($border-radius, small);
+        }
       }
 
       &-contacts {
@@ -129,6 +123,10 @@
             color: $hover-color;
           }
         }
+      }
+
+      &-button {
+        display: none;
       }
     }
   }
@@ -210,6 +208,10 @@
             color: $hover-color;
           }
         }
+      }
+
+      &-button {
+        display: none;
       }
     }
   }
