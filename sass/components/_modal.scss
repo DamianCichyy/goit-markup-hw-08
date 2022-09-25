@@ -1,0 +1,218 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  .modal {
+    transform: scale(0.7);
+  }
+}
+
+.modal {
+  @include transition-transform;
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background: $primary-background-color;
+  box-shadow: 0px 1px 3px $modal-shadow-one, 0px 1px 1px $modal-shadow-two,
+    0px 2px 1px $modal-shadow-three;
+  border-radius: map-get($border-radius, big);
+  padding: 40px 40px;
+
+  &__is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__background {
+    @include transition-visibility-opacity;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background-color;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &__button-exit {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-style: none;
+    border-radius: map-get($border-radius, circle);
+    width: 30px;
+    height: 30px;
+
+    &-svg {
+      @include transition-background-color-fill;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: map-get($border-radius, circle);
+      background-color: $primary-background-color;
+      border: 1px solid $modal-button-exit-color;
+      fill: $black-svg;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $white-svg;
+      background-color: $hover-color;
+    }
+  }
+
+  &__header {
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, d);
+    line-height: map-get($line-height, i);
+    text-align: center;
+    color: $secondary-font-color;
+    padding-bottom: 12px;
+  }
+
+  &__form {
+    @include flex-column;
+    gap: 10px;
+
+    &-label {
+      @include flex-column;
+      gap: 4px;
+      position: relative;
+
+      &:hover &-input,
+      &:focus-within &-input {
+        border: 1px solid $hover-color;
+      }
+
+      &:hover &-svg,
+      &:focus-within &-svg {
+        fill: $hover-color;
+      }
+
+      &-paragraph {
+        font-size: map-get($font-size, g);
+        line-height: map-get($line-height, a);
+        letter-spacing: map-get($letter-spacing, small);
+      }
+
+      &-input {
+        @include transition-border;
+        border: 1px solid $modal-border-color;
+        border-radius: map-get($border-radius, big);
+        width: 100%;
+        height: 40px;
+        padding: 0 32px;
+        color: $secondary-font-color;
+      }
+
+      &-svg {
+        @include transition-fill;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 29px;
+        left: 12px;
+        pointer-events: none;
+        fill: $secondary-svg-color;
+      }
+
+      &-textarea {
+        @include transition-border;
+        resize: none;
+        width: 448px;
+        height: 120px;
+        padding: 12px 16px;
+        border: 1px solid $modal-border-color;
+        border-radius: map-get($border-radius, big);
+        color: $secondary-font-color;
+
+        &:hover,
+        &:focus {
+          border: 1px solid $hover-color;
+        }
+      }
+    }
+
+    &-checkbox {
+      @include flex-row;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      padding: 10px 0 20px 15px;
+
+      &-input:checked ~ &-svg {
+        background-color: $hover-color;
+        fill: $hover-color;
+      }
+
+      &-input {
+        cursor: pointer;
+        opacity: 0;
+        width: 16px;
+        height: 15px;
+        pointer-events: visible;
+      }
+
+      &-svg {
+        @include transition-background-color-fill;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        width: 16px;
+        height: 15px;
+        border-radius: map-get($border-radius, small);
+        fill: $secondary-svg-color;
+
+        &:hover,
+        &:focus {
+          fill: $hover-color;
+        }
+
+        &-vector {
+          fill: $white-svg;
+        }
+      }
+
+      &-paragraph {
+        line-height: map-get($line-height, e);
+
+        &-links {
+          @include transition-color;
+          text-decoration: underline;
+          color: $hover-color;
+
+          &:hover,
+          &:focus {
+            color: $button-active-background-color;
+          }
+        }
+      }
+    }
+
+    &-button {
+      @include flex;
+      @include transition-background-color;
+      cursor: pointer;
+      font-weight: map-get($font-weight, bold);
+      font-size: map-get($font-size, f);
+      line-height: map-get($line-height, d);
+      letter-spacing: map-get($letter-spacing, big);
+      color: $third-font-color;
+      margin: 0 auto;
+      background-color: $hover-color;
+      border-style: none;
+      padding: 10px 76px;
+      box-shadow: 0px 4px 4px $big-buttons-shadow;
+      border-radius: map-get($border-radius, big);
+
+      &:hover,
+      &:focus {
+        background-color: $button-active-background-color;
+      }
+    }
+  }
+}

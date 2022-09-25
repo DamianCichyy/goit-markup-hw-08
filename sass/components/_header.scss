@@ -1,0 +1,64 @@
+.header {
+  border-bottom: 1px solid $header-border-color;
+  padding: 24px 0 25px 0;
+
+  &__container {
+    @include flex-row;
+    align-items: center;
+    gap: 93px;
+
+    &-logo {
+      color: $header-logo-color;
+    }
+
+    &-nav {
+      @include flex-row;
+      @include header-fonts;
+      gap: 46px;
+
+      &-link {
+        @include transition-color;
+        color: $secondary-font-color;
+        position: relative;
+
+        &:hover,
+        &:focus {
+          color: $hover-color;
+        }
+      }
+
+      .blue-line:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        right: 0;
+        bottom: 0;
+        transform: translateY(33px);
+        background-color: $hover-color;
+        border-radius: map-get($border-radius, small);
+      }
+    }
+
+    &-contacts {
+      @include flex-row;
+      @include header-fonts;
+      gap: 30px;
+      margin-left: auto;
+
+      &-link {
+        @include flex;
+        @include transition-color-fill;
+        gap: 10px;
+        fill: $header-svg-color;
+
+        &:hover,
+        &:focus {
+          fill: $hover-color;
+          color: $hover-color;
+        }
+      }
+    }
+  }
+}

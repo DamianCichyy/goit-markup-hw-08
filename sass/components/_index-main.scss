@@ -1,0 +1,44 @@
+.main {
+  @include flex-column;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(
+      $grdient-background-color,
+      $grdient-background-color
+    ),
+    url(../images/background.jpg), no-repeat;
+  width: 100%;
+  padding: 200px 452px;
+
+  &__header {
+    font-weight: map-get($font-weight, super-bold);
+    font-size: map-get($font-size, a);
+    line-height: map-get($line-height, b);
+    text-align: center;
+    letter-spacing: map-get($letter-spacing, big);
+    text-transform: uppercase;
+    color: $primary-header-color;
+  }
+
+  &__button {
+    @include flex;
+    @include transition-background-color;
+    cursor: pointer;
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, f);
+    line-height: map-get($line-height, d);
+    text-align: center;
+    letter-spacing: map-get($letter-spacing, big);
+    color: $primary-header-color;
+    background: $button-background-color;
+    box-shadow: 0px 4px 4px $big-buttons-shadow;
+    border-radius: map-get($border-radius, big);
+    border-style: none;
+    padding: 10px 41px 10px 42px;
+
+    &:hover,
+    &:focus {
+      background-color: $button-active-background-color;
+    }
+  }
+}

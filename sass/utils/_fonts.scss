@@ -1,0 +1,45 @@
+/* Font Family */
+$primary-font-family: "Roboto", sans-serif;
+$secondary-font-family: "Raleway", sans-serif;
+
+/* Font Weight */
+$font-weight: (
+  "primary": 400,
+  "super-bold": 900,
+  "bold": 700,
+  "medium": 500,
+);
+
+/* Font Size */
+$font-size: (
+  "primary": 14px,
+  "a": 44px,
+  "b": 36px,
+  "c": 26px,
+  "d": 20px,
+  "e": 18px,
+  "f": 16px,
+  "g": 12px,
+);
+
+/* Line Height */
+$line-height: (
+  "primary": 1.143,
+  "a": 1.167,
+  "b": 1.364,
+  "c": 2,
+  "d": 1.875,
+  "e": 1.715,  
+  "f": 1.556,
+  "g": 1.193,
+  "h": 1.188,
+  "i": 1.15,
+);
+
+/* Letter Spacing */
+$letter-spacing: (
+  "primary": 0.03em,
+  "big": 0.06em,
+  "medium": 0.02em,
+  "small": 0.01em,
+);

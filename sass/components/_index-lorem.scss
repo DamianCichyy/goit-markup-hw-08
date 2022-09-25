@@ -1,0 +1,28 @@
+.lorem {
+  @include flex-row;
+  gap: 30px;
+
+  &__list {
+    @include flex-column;
+    gap: 10px;
+
+    &-container {
+      @include flex;
+      justify-content: center;
+      padding: 25px 0;
+      background-color: $secondary-background-color;
+      border-radius: map-get($border-radius, big);
+    }
+
+    &-header {
+      font-weight: map-get($font-weight, bold);
+      text-transform: uppercase;
+      color: $secondary-font-color;
+      padding-top: 20px;
+    }
+
+    &-paragraph {
+      line-height: map-get($line-height, e);
+    }
+  }
+}
