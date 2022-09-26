@@ -22,7 +22,7 @@
     top: 10px;
     right: 15px;
     background-color: transparent;
-    border: none;
+    border-style: none;
 
     &:hover &-svg,
     &:focus &-svg {
@@ -31,11 +31,80 @@
     }
 
     &-svg {
+      @include transition-background-color-fill;
       cursor: pointer;
+      fill: $secondary-svg-color;
       max-height: 40px;
       max-width: 40px;
       border-radius: map-get($border-radius, circle);
       border: 1px solid $modal-button-exit-color;
+    }
+  }
+
+  &__container {
+    @include flex-column;
+    gap: 64px;
+
+    &-nav {
+      @include flex-column;
+      gap: 36px;
+      padding-bottom: 238px;
+
+      &-link {
+        @include transition-color;
+        font-weight: map-get($font-weight, medium);
+        font-size: map-get($font-size, i);
+        line-height: map-get($line-height, j);
+        letter-spacing: map-get($letter-spacing, medium);
+        color: $secondary-font-color;
+
+        &:hover,
+        &:focus {
+          color: $hover-color;
+        }
+      }
+    }
+
+    &-contacts {
+      @include flex-column;
+      gap: 32px;
+
+      &-link {
+        @include transition-font;
+        font-weight: map-get($font-weight, medium);
+        font-size: map-get($font-size, h);
+        line-height: map-get($line-height, a);
+        letter-spacing: map-get($letter-spacing, medium);
+
+        &:hover,
+        &:focus {
+          line-height: map-get($line-height, k);
+          font-size: map-get($font-size, b);
+          color: $hover-color;
+        }
+      }
+    }
+
+    &-socials {
+      @include flex-row;
+      gap: 10px;
+
+      &-link {
+        @include transition-color;
+        display: block;
+        font-weight: map-get($font-weight, medium);
+        font-size: map-get($font-size, e);
+        line-height: map-get($line-height, l);
+        letter-spacing: map-get(&letter-spacing, medium);
+        color: $hover-color;
+        padding-right: 10px;
+        border-right: 1px solid $mobile-border-color;
+
+        &:hover,
+        &:focus {
+          color: $button-active-background-color;
+        }
+      }
     }
   }
 }

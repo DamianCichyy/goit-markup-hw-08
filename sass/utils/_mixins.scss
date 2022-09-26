@@ -56,6 +56,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@mixin transition-font {
+  transition-property: font-size, line-height, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @mixin transition-color-fill {
   transition-property: color, fill;
   transition-duration: 250ms;
