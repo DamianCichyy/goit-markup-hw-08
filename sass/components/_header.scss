@@ -5,7 +5,6 @@
   &__container {
     @include flex-row;
     align-items: center;
-    gap: 93px;
 
     &-logo {
       color: $header-logo-color;
@@ -49,18 +48,10 @@
 
 @media (min-width: 768px) {
   .header {
-    border-bottom: 1px solid $header-border-color;
     padding: 21px 0 21px 0;
 
     &__container {
-      @include flex-row;
-      align-items: center;
       gap: 83px;
-
-      &-logo {
-        font-size: map-get($font-size, h);
-        line-height: map-get($line-height, a);
-      }
 
       &-nav {
         @include flex-row;
@@ -133,12 +124,9 @@
 
 @media (min-width: 1200px) {
   .header {
-    border-bottom: 1px solid $header-border-color;
     padding: 24px 0 25px 0;
 
     &__container {
-      @include flex-row;
-      align-items: center;
       gap: 93px;
 
       &-logo {
