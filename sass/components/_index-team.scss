@@ -1,6 +1,10 @@
 .team {
-  @include flex-row;
+  @include flex-column;
   gap: 30px;
+
+  img {
+    width: 100%;
+  }
 
   &__list {
     background-color: $primary-background-color;
@@ -43,5 +47,23 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .team {
+    @include flex-wrap;
+    flex-direction: unset;
+
+    &__list {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .team {
+    @include flex-row;
+    flex-wrap: nowrap;
   }
 }

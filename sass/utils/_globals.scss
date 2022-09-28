@@ -25,20 +25,41 @@ body {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .secondary-header {
   font-weight: map-get($font-weight, bold);
-  font-size: map-get($font-size, b);
-  line-height: map-get($line-height, a);
+  font-size: 28px;
+  line-height: map-get($line-height, j);
+  font-size: map-get($font-size, j);
   text-align: center;
   color: $secondary-font-color;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .secondary-header {
+    font-size: map-get($font-size, b);
+    line-height: map-get($line-height, a);
+    padding-bottom: 50px;
+  }
 }
 
 .no-padding {
-  padding-bottom: 0;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .no-padding {
+    padding-bottom: 0;
+  }
 }
 
 .section-background {
