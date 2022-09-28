@@ -5,27 +5,30 @@
   &__container {
     @include flex-column;
     align-items: center;
+    text-align: center;
     gap: 60px;
 
     &-header {
       font-weight: map-get($font-weight, bold);
       text-transform: uppercase;
-      color: $third-font-color;
+      color: $primary-header-color;
     }
 
     &-address {
       @include flex-column;
-      align-items: center;
       gap: 20px;
 
       &-logo {
+        font-family: $secondary-font-family;
+        font-weight: map-get($font-weight, bold);
+        font-size: map-get($font-size, h);
+        line-height: map-get($line-height, a);
         color: $third-font-color;
       }
 
       &-links {
         @include flex-column;
-        align-items: center;
-        gap: 9px;
+        gap: 8px;
         font-style: normal;
         line-height: map-get($line-height, e);
 
@@ -47,9 +50,7 @@
 
     &-socials {
       @include flex-column;
-      align-items: center;
       gap: 20px;
-      padding-top: 12px;
 
       &-icons {
         @include flex-row;
@@ -75,56 +76,49 @@
     &-newsletter {
       @include flex-column;
       gap: 20px;
-      align-items: center;
-      width: 100%;
 
       &-form {
         @include flex-column;
         gap: 20px;
         align-items: center;
-        width: 100%;
 
-        &-label {
-          width: 100%;
+        &-input {
+          @include transition-border;
+          filter: drop-shadow(0px 4px 4px $big-buttons-shadow);
+          width: calc(100vw - 30px);
+          background-color: $third-background-color;
+          padding: 15px 16px;
+          border: 1px solid $footer-input-border-color;
+          border-radius: map-get($border-radius, big);
 
-          &-input {
-            @include transition-border;
-            filter: drop-shadow(0px 4px 4px $big-buttons-shadow);
-            background-color: $third-background-color;
-            padding: 15px 16px;
-            width: 100%;
-            border: 1px solid $footer-input-border-color;
-            border-radius: map-get($border-radius, big);
-
-            &:hover,
-            &:focus {
-              border: 1px solid $hover-color;
-            }
+          &:hover,
+          &:focus {
+            border: 1px solid $hover-color;
           }
+        }
 
-          &-button {
-            @include flex-row;
-            @include transition-background-color;
-            cursor: pointer;
-            gap: 24px;
-            align-items: center;
-            padding: 10px 28px 10px 42px;
-            margin: auto 0;
-            background-color: $hover-color;
-            box-shadow: 0px 4px 4px $big-buttons-shadow;
-            border-radius: map-get($border-radius, big);
-            border-style: none;
-            font-weight: map-get($font-weight, bold);
-            font-size: map-get($font-size, f);
-            line-height: map-get($line-height, d);
-            letter-spacing: map-get($letter-spacing, big);
-            color: $third-font-color;
-            fill: $white-svg;
+        &-button {
+          @include flex-row;
+          @include transition-background-color;
+          cursor: pointer;
+          gap: 24px;
+          align-items: center;
+          padding: 10px 28px 10px 42px;
+          margin: auto 0;
+          background-color: $hover-color;
+          box-shadow: 0px 4px 4px $big-buttons-shadow;
+          border-radius: map-get($border-radius, big);
+          border-style: none;
+          font-weight: map-get($font-weight, bold);
+          font-size: map-get($font-size, f);
+          line-height: map-get($line-height, d);
+          letter-spacing: map-get($letter-spacing, big);
+          color: $third-font-color;
+          fill: $white-svg;
 
-            &:hover,
-            &:focus {
-              background-color: $button-active-background-color;
-            }
+          &:hover,
+          &:focus {
+            background-color: $button-active-background-color;
           }
         }
       }
@@ -152,6 +146,10 @@
         gap: 20px;
 
         &-logo {
+          font-family: $secondary-font-family;
+          font-weight: map-get($font-weight, bold);
+          font-size: map-get($font-size, c);
+          line-height: map-get($line-height, h);
           color: $third-font-color;
         }
 
