@@ -89,7 +89,8 @@
     }
 
     &-socials {
-      @include flex-row;
+      @include flex-wrap;
+      flex-direction: row;
       gap: 10px;
 
       &-link {
