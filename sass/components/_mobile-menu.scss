@@ -4,7 +4,6 @@
   left: 0;
   min-width: 100vw;
   min-height: 100vh;
-
   background-color: $primary-background-color;
   z-index: 999;
   transform: translateX(100%);
@@ -47,6 +46,7 @@
     position: absolute;
     top: 48px;
     left: 40px;
+    right: 48px;
 
     &-nav {
       @include flex-column;
