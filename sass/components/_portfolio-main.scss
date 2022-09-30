@@ -78,7 +78,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        font-size: map-get($font-size, e);
+        font-size: map-get($font-size, slim);
         line-height: map-get($line-height, f);
         color: $third-font-color;
         background-color: $blue-overlay-background-color;
@@ -99,15 +99,15 @@
 
       &-header {
         font-weight: map-get($font-weight, bold);
-        font-size: map-get($font-size, e);
-        line-height: map-get($line-height, c);
+        font-size: map-get($font-size, slim);
+        line-height: map-get($line-height, largest);
         letter-spacing: map-get($letter-spacing, big);
         color: $secondary-font-color;
       }
 
       &-paragraph {
-        font-size: map-get($font-size, f);
-        line-height: map-get($line-height, d);
+        font-size: map-get($font-size, slimmer);
+        line-height: map-get($line-height, larger);
       }
     }
   }

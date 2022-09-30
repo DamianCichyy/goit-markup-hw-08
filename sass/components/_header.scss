@@ -10,7 +10,7 @@
       color: $header-logo-color;
       font-family: $secondary-font-family;
       font-weight: map-get($font-weight, bold);
-      font-size: map-get($font-size, h);
+      font-size: map-get($font-size, smaller);
       line-height: map-get($line-height, a);
     }
 
@@ -94,7 +94,7 @@
           @include transition-color-fill;
           gap: 8px;
           fill: $header-svg-color;
-          font-size: map-get($font-size, g);
+          font-size: map-get($font-size, slimmest);
           line-height: map-get($line-height, a);
 
           &-envelope {
@@ -133,8 +133,8 @@
         color: $header-logo-color;
         font-family: $secondary-font-family;
         font-weight: map-get($font-weight, bold);
-        font-size: map-get($font-size, c);
-        line-height: map-get($line-height, g);
+        font-size: map-get($font-size, small);
+        line-height: map-get($line-height, bigger);
       }
 
       &-nav {

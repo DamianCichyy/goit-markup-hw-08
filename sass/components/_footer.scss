@@ -21,7 +21,7 @@
       &-logo {
         font-family: $secondary-font-family;
         font-weight: map-get($font-weight, bold);
-        font-size: map-get($font-size, h);
+        font-size: map-get($font-size, smaller);
         line-height: map-get($line-height, a);
         color: $third-font-color;
       }
@@ -30,7 +30,7 @@
         @include flex-column;
         gap: 8px;
         font-style: normal;
-        line-height: map-get($line-height, e);
+        line-height: map-get($line-height, large);
 
         &-paragraph {
           color: $third-font-color;
@@ -110,8 +110,8 @@
           border-radius: map-get($border-radius, big);
           border-style: none;
           font-weight: map-get($font-weight, bold);
-          font-size: map-get($font-size, f);
-          line-height: map-get($line-height, d);
+          font-size: map-get($font-size, slimmer);
+          line-height: map-get($line-height, larger);
           letter-spacing: map-get($letter-spacing, big);
           color: $third-font-color;
           fill: $white-svg;
@@ -142,7 +142,7 @@
           @include flex-column;
           gap: 8px;
           font-style: normal;
-          line-height: map-get($line-height, e);
+          line-height: map-get($line-height, large);
 
           &-paragraph {
             color: $third-font-color;
@@ -225,8 +225,8 @@
             border-radius: map-get($border-radius, big);
             border-style: none;
             font-weight: map-get($font-weight, bold);
-            font-size: map-get($font-size, f);
-            line-height: map-get($line-height, d);
+            font-size: map-get($font-size, slimmer);
+            line-height: map-get($line-height, larger);
             letter-spacing: map-get($letter-spacing, big);
             color: $third-font-color;
             fill: $white-svg;
@@ -255,8 +255,8 @@
 
       &-address {
         &-logo {
-          font-size: map-get($font-size, c);
-          line-height: map-get($line-height, h);
+          font-size: map-get($font-size, small);
+          line-height: map-get($line-height, smaller);
         }
 
         &-links {

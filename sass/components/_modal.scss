@@ -67,8 +67,8 @@
 
   &__header {
     font-weight: map-get($font-weight, bold);
-    font-size: map-get($font-size, d);
-    line-height: map-get($line-height, n);
+    font-size: map-get($font-size, smallest);
+    line-height: map-get($line-height, medium);
     text-align: center;
     color: $secondary-font-color;
     padding-bottom: 12px;
@@ -94,7 +94,7 @@
       }
 
       &-paragraph {
-        font-size: map-get($font-size, g);
+        font-size: map-get($font-size, slimmest);
         line-height: map-get($line-height, a);
         letter-spacing: map-get($letter-spacing, small);
       }
@@ -178,7 +178,7 @@
       }
 
       &-paragraph {
-        font-size: map-get($font-size, g);
+        font-size: map-get($font-size, slimmest);
         line-height: map-get($line-height, a);
 
         &-links {
@@ -199,8 +199,8 @@
       @include transition-background-color;
       cursor: pointer;
       font-weight: map-get($font-weight, bold);
-      font-size: map-get($font-size, f);
-      line-height: map-get($line-height, d);
+      font-size: map-get($font-size, slimmer);
+      line-height: map-get($line-height, larger);
       letter-spacing: map-get($letter-spacing, big);
       color: $third-font-color;
       margin: 0 auto;
@@ -237,7 +237,7 @@
     &__form {
       &-checkbox {
         &-paragraph {
-          line-height: map-get($line-height, e);
+          line-height: map-get($line-height, large);
         }
       }
     }

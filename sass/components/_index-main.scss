@@ -12,8 +12,8 @@
 
   &__header {
     font-weight: map-get($font-weight, super-bold);
-    font-size: map-get($font-size, c);
-    line-height: map-get($line-height, m);
+    font-size: map-get($font-size, small);
+    line-height: map-get($line-height, biggest);
     text-align: center;
     letter-spacing: map-get($letter-spacing, big);
     text-transform: uppercase;
@@ -25,8 +25,8 @@
     @include transition-background-color;
     cursor: pointer;
     font-weight: map-get($font-weight, bold);
-    font-size: map-get($font-size, f);
-    line-height: map-get($line-height, d);
+    font-size: map-get($font-size, slimmer);
+    line-height: map-get($line-height, larger);
     display: flex;
     letter-spacing: map-get($letter-spacing, big);
     color: $third-font-color;
@@ -54,8 +54,8 @@
     padding: 200px 452px;
 
     &__header {
-      font-size: map-get($font-size, a);
-      line-height: map-get($line-height, b);
+      font-size: map-get($font-size, biggest);
+      line-height: map-get($line-height, big);
     }
   }
 }

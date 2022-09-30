@@ -23,7 +23,7 @@
     }
 
     &-paragraph {
-      line-height: map-get($line-height, e);
+      line-height: map-get($line-height, large);
     }
   }
 }

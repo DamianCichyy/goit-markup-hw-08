@@ -56,7 +56,7 @@
       &-link {
         @include transition-color;
         font-weight: map-get($font-weight, medium);
-        font-size: map-get($font-size, i);
+        font-size: map-get($font-size, bigger);
         line-height: map-get($line-height, j);
         letter-spacing: map-get($letter-spacing, medium);
         color: $secondary-font-color;
@@ -75,14 +75,14 @@
       &-link {
         @include transition-font;
         font-weight: map-get($font-weight, medium);
-        font-size: map-get($font-size, h);
+        font-size: map-get($font-size, smaller);
         line-height: map-get($line-height, a);
         letter-spacing: map-get($letter-spacing, medium);
 
         &:hover,
         &:focus {
           line-height: map-get($line-height, k);
-          font-size: map-get($font-size, b);
+          font-size: map-get($font-size, big);
           color: $hover-color;
         }
       }
@@ -97,8 +97,8 @@
         @include transition-color;
         display: block;
         font-weight: map-get($font-weight, medium);
-        font-size: map-get($font-size, e);
-        line-height: map-get($line-height, l);
+        font-size: map-get($font-size, slim);
+        line-height: map-get($line-height, small);
         letter-spacing: map-get($letter-spacing, medium);
         color: $hover-color;
         padding-right: 10px;

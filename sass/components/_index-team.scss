@@ -11,8 +11,8 @@
     box-shadow: 0px 1px 3px $team-shadow-one, 0px 1px 1px $team-shadow-two,
       0px 2px 1px $team-shadow-three;
     border-radius: 0px 0px 4px 4px;
-    font-size: map-get($font-size, f);
-    line-height: map-get($line-height, h);
+    font-size: map-get($font-size, slimmer);
+    line-height: map-get($line-height, smaller);
     text-align: center;
 
     &-figcaption {

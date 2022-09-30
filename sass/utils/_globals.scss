@@ -38,7 +38,7 @@ body {
   font-weight: map-get($font-weight, bold);
   font-size: 28px;
   line-height: map-get($line-height, j);
-  font-size: map-get($font-size, j);
+  font-size: map-get($font-size, medium);
   text-align: center;
   color: $secondary-font-color;
   padding-bottom: 30px;
@@ -46,7 +46,7 @@ body {
 
 @media (min-width: 1200px) {
   .secondary-header {
-    font-size: map-get($font-size, b);
+    font-size: map-get($font-size, big);
     line-height: map-get($line-height, a);
     padding-bottom: 50px;
   }
