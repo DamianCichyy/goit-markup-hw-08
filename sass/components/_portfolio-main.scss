@@ -15,7 +15,6 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 26px;
-      letter-spacing: 0.03em;
       color: #212121;
       height: 38px;
       border-style: none;
@@ -114,13 +113,38 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 789px) {
   .portfolio {
     gap: 30px;
 
     &__buttons {
       @include flex-row;
-      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    &__cards {
+      @include flex-wrap;
+      flex-direction: row;
+
+      &-item {
+        flex-basis: calc((100% - 30px) / 2);
+
+        &-overlay {
+          padding: 49px 24px 0 24px;
+        }
+
+        &-one {
+          padding-bottom: 56px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 790px) {
+  .portfolio {
+    &__buttons {
+      @include flex-row;
       justify-content: center;
     }
 
@@ -135,30 +159,29 @@
           padding: 49px 24px 0 24px;
         }
       }
-
-      &-figcaption {
-        padding: 20px 0 20px 24px;
-      }
     }
   }
+}
 
-  @media (min-width: 1200px) {
-    .portfolio {
-      gap: 50px;
+@media (min-width: 1200px) {
+  .portfolio {
+    gap: 50px;
 
-      &__buttons {
-        &-button {
-          padding: 6px 22px;
-        }
+    &__buttons {
+      &-button {
+        padding: 6px 22px;
       }
+    }
 
-      &__cards {
-        &-item {
-          flex-basis: calc((100% - 60px) / 3);
+    &__cards {
+      @include flex-wrap;
+      flex-direction: row;
 
-          &-overlay {
-            padding: 49px 45px 0 24px;
-          }
+      &-item {
+        flex-basis: calc((100% - 60px) / 3);
+
+        &-overlay {
+          padding: 49px 45px 0 24px;
         }
       }
     }

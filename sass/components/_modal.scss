@@ -11,8 +11,8 @@
 .modal {
   @include transition-transform;
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: calc(100vw - 30px);
+  min-height: 581px;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
@@ -68,7 +68,7 @@
   &__header {
     font-weight: map-get($font-weight, bold);
     font-size: map-get($font-size, d);
-    line-height: map-get($line-height, i);
+    line-height: map-get($line-height, n);
     text-align: center;
     color: $secondary-font-color;
     padding-bottom: 12px;
@@ -123,7 +123,7 @@
       &-textarea {
         @include transition-border;
         resize: none;
-        width: 448px;
+        width: 100%;
         height: 120px;
         padding: 12px 16px;
         border: 1px solid $modal-border-color;
@@ -142,7 +142,7 @@
       align-items: center;
       gap: 8px;
       position: relative;
-      padding: 10px 0 20px 15px;
+      padding: 10px 0 20px 0;
 
       &-input:checked ~ &-svg {
         background-color: $hover-color;
@@ -178,7 +178,8 @@
       }
 
       &-paragraph {
-        line-height: map-get($line-height, e);
+        font-size: map-get($font-size, g);
+        line-height: map-get($line-height, a);
 
         &-links {
           @include transition-color;
@@ -212,6 +213,32 @@
       &:hover,
       &:focus {
         background-color: $button-active-background-color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+
+    &__header {
+      line-height: map-get($line-height, i);
+    }
+
+    &__form {
+      &-checkbox {
+        &-paragraph {
+          line-height: map-get($line-height, e);
+        }
       }
     }
   }
