@@ -11,7 +11,7 @@
       font-family: $secondary-font-family;
       font-weight: map-get($font-weight, bold);
       font-size: map-get($font-size, smaller);
-      line-height: map-get($line-height, a);
+      line-height: map-get($line-height, slim);
     }
 
     &-nav {
@@ -95,7 +95,7 @@
           gap: 8px;
           fill: $header-svg-color;
           font-size: map-get($font-size, slimmest);
-          line-height: map-get($line-height, a);
+          line-height: map-get($line-height, slim);
 
           &-envelope {
             width: 14px;

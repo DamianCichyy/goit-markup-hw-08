@@ -95,7 +95,7 @@
 
       &-paragraph {
         font-size: map-get($font-size, slimmest);
-        line-height: map-get($line-height, a);
+        line-height: map-get($line-height, slim);
         letter-spacing: map-get($letter-spacing, small);
       }
 
@@ -179,7 +179,7 @@
 
       &-paragraph {
         font-size: map-get($font-size, slimmest);
-        line-height: map-get($line-height, a);
+        line-height: map-get($line-height, slim);
 
         &-links {
           @include transition-color;
@@ -231,7 +231,7 @@
     height: 581px;
 
     &__header {
-      line-height: map-get($line-height, i);
+      line-height: map-get($line-height, slimmer);
     }
 
     &__form {
