@@ -134,7 +134,7 @@
         font-family: $secondary-font-family;
         font-weight: map-get($font-weight, bold);
         font-size: map-get($font-size, small);
-        line-height: map-get($line-height, bigger);
+        line-height: map-get($line-height, smaller);
       }
 
       &-nav {
@@ -152,19 +152,6 @@
             color: $hover-color;
           }
         }
-
-        .blue-line:after {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 100%;
-          height: 4px;
-          right: 0;
-          bottom: 0;
-          transform: translateY(33px);
-          background-color: $hover-color;
-          border-radius: map-get($border-radius, small);
-        }
       }
 
       &-contacts {
@@ -176,6 +163,8 @@
         &-link {
           @include flex;
           @include transition-color-fill;
+          font-size: map-get($font-size, primary);
+          line-height: map-get($line-height, primary);
           gap: 10px;
           fill: $header-svg-color;
 

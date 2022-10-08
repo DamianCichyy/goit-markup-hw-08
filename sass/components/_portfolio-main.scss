@@ -79,7 +79,7 @@
         top: 0;
         left: 0;
         font-size: map-get($font-size, slim);
-        line-height: map-get($line-height, f);
+        line-height: map-get($line-height, bigger);
         color: $third-font-color;
         background-color: $blue-overlay-background-color;
         transform: translateY(100%);

@@ -35,6 +35,10 @@
 
     &__list {
       flex-basis: calc((100% - 30px) / 2);
+
+      &-header {
+        text-align: unset;
+      }
     }
   }
 }
