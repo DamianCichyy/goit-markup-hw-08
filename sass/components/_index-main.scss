@@ -6,7 +6,7 @@
       $grdient-background-color,
       $grdient-background-color
     ),
-    url(/images/background@3x.jpg), no-repeat;
+    url(/images/background.jpg), no-repeat;
   padding: 118px 58px 118px 57px;
   background-size: 100% 100%;
 
@@ -43,7 +43,10 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .main {
     background: linear-gradient(
         $grdient-background-color,
@@ -51,18 +54,17 @@
       ),
       url(/images/background@2x.jpg), no-repeat;
     background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
     padding: 118px 201px 118px 202px;
   }
 }
 
 @media (min-width: 1200px) {
   .main {
-    background: linear-gradient(
-        $grdient-background-color,
-        $grdient-background-color
-      ),
-      url(/images/background.jpg), no-repeat;
-    background-size: 100% 100%;
     padding: 200px 452px;
 
     &__header {
