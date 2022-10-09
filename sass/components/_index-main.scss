@@ -8,7 +8,7 @@
     ),
     url(../images/background.jpg), no-repeat;
   padding: 118px 58px 118px 57px;
-  background-size: 100% 100%;
+  background-size: cover;
 
   &__header {
     font-weight: map-get($font-weight, super-bold);
@@ -70,6 +70,6 @@
         $grdient-background-color
       ),
       url(../images/mobile-background.jpg), no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
   }
 }
