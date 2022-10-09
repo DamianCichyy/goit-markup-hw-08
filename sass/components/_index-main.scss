@@ -6,9 +6,9 @@
       $grdient-background-color,
       $grdient-background-color
     ),
-    url(../images/background.jpg), no-repeat;
+    url(../images/background-images/background.jpg), no-repeat;
   padding: 118px 58px 118px 57px;
-  background-size: cover;
+  background-size: 100% 100%;
 
   &__header {
     font-weight: map-get($font-weight, super-bold);
@@ -69,7 +69,7 @@
         $grdient-background-color,
         $grdient-background-color
       ),
-      url(../images/mobile-background.jpg), no-repeat;
-    background-size: cover;
+      url(../images/background-images/mobile-background.jpg), no-repeat;
+    background-size: 100% 100%;
   }
 }
